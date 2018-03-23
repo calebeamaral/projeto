@@ -1,0 +1,37 @@
+{% extends 'carros/base.html' %}
+
+{% block title %}
+Carros
+{% endblock %}
+
+{% block content %}
+
+
+{% if carros %}
+<table id="tabela_carros" class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <!--<th scope="col"></th>-->
+      <th scope="col">Nome do Carro</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for carro in carros %}
+    <tr>
+        <!--<th >{{forLoop.counter}}</th>-->
+        <th scope="row">
+            <a href ="/carros/{{carro.id}}">
+                {{carro.name}}
+            </a>
+        </th>
+    </tr>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>
+{% else %}
+    <h3>Nenhum carro cadastrado</h3>
+{% endif %}
+
+{% endblock %}

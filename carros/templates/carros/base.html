@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href= "/static/style.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+
+           {% endblock %}
+    </title>
+</head>
+<body>
+<nav>
+    <div class="nav" id="nav-tab">
+        <a class="nav-item nav-link"
+           href="/carros">Carros</a>
+        <a class="nav-item nav-link"
+           href="/fabricantes">Fabricante</a>
+    </div>
+</nav>
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

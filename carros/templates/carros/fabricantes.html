@@ -1,0 +1,34 @@
+{% extends 'carros/base.html' %}
+
+{% block title %}
+Fabricantes
+{% endblock %}
+
+{% block content %}
+
+{% if fabricantes %}
+<table id="tabela_marcas" class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nome do Fabricante</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for fabricante in fabricantes %}
+    <tr>
+        <th scope="row">
+            <a href ="/fabricantes">
+                {{fabricante.nome}}
+            </a>
+        </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+    <h3>Nenhuma marca cadastrada</h3>
+{% endif %}
+
+{% endblock %}
+
